@@ -16,4 +16,7 @@ public class HomeController {
         model.addAttribute("admin", new Admin());
         return "Login";
     }
+
+    @GetMapping("/signup")
+    public String signUp(){}
 }
