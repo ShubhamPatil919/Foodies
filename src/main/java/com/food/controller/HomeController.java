@@ -18,4 +18,11 @@ public class HomeController {
 
     @GetMapping("/signup")
     public void signUp(){}
+
+    @GetMapping("/dash")
+    public String dashborad(Model model) {
+        model.addAttribute("admin", new Admin());
+        return "add_menu";
+    }
+
 }
