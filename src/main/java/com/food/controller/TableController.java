@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -17,5 +19,11 @@ public class TableController {
     {
         model.addAttribute("table",new Seating());
         return "add-table";
+    }
+
+    @PostMapping("/add-table")
+            public String addTable(@ModelAttribute Seating seating, Model model)
+    {
+    return "";
     }
 }

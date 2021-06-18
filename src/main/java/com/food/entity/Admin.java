@@ -12,7 +12,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,5 +23,9 @@ public class Admin {
     private String role;
     @OneToMany(cascade =CascadeType.ALL,mappedBy = "admin",targetEntity = Seating.class)
     private List<Seating> seatings = new ArrayList<>();
+
+
+
+
 
 }

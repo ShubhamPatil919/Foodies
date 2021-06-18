@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script th:src="@{/js/bootstrap-switch.min.js}"></script>
+    <link rel="stylesheet"th:href="@{/css/icheck-bootstrap.min.css}">
+
 </head>
 <body>
 <section class="content">
@@ -13,8 +15,8 @@
         <div class="col-md-6">
             <!-- general form elements -->
             <div class="card card-primary">
-                <div class="card-header">
-                    <h3 class="card-title">Quick Example</h3>
+                <div class="card-header  text-center">
+                    <h3 class="card-title">Add Table</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -25,20 +27,30 @@
                             <input type="text" name="table_Name" class="form-control" id="tableName" placeholder="Enter table Name">
                         </div>
 
-                        <div class="bootstrap-switch-on bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate" style="width: 92px;">
-                            <div class="bootstrap-switch-container" style="width: 135px; margin-left: 0px;">
-                                <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 45px;">ON</span>
-                                <span class="bootstrap-switch-label" style="width: 45px;">&nbsp;</span>
-                                <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 45px;">OFF</span>
-                                <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
-                            </div>
+                        <div class="form-group">
+                            <label>Status</label>
+
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                               Active
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                In-Active
+                            </label>
+                        </div>
                         </div>
 
 
 
 
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer text-center">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
 
@@ -48,15 +60,7 @@
     </div>
     </div>
 
-    <div class="card card-secondary">
-        <div class="card-header">
-            <h3 class="card-title">Bootstrap Switch</h3>
-        </div>
-        <div class="card-body">
-            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-focused bootstrap-switch-animate bootstrap-switch-off" style="width: 92px;"><div class="bootstrap-switch-container" style="width: 135px; margin-left: -45px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 45px;">ON</span><span class="bootstrap-switch-label" style="width: 45px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 45px;">OFF</span><input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch=""></div></div>
-            <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-focused bootstrap-switch-animate bootstrap-switch-on" style="width: 92px;"><div class="bootstrap-switch-container" style="width: 135px; margin-left: 0px;"><span class="bootstrap-switch-handle-on bootstrap-switch-success" style="width: 45px;">ON</span><span class="bootstrap-switch-label" style="width: 45px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-danger" style="width: 45px;">OFF</span><input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="" data-off-color="danger" data-on-color="success"></div></div>
-        </div>
-    </div>
+
 
 
 </section>

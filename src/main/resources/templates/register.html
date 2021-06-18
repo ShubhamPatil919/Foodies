@@ -14,37 +14,21 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <form class="box" th:action="@{/login}" action="#" method="post">
+
+
+
+                <form class="box" th:action="@{/do_register}" method="post" th:object="${admin}">
                     <div class="imglogo">
                         <img th:src="@{/img/foody_logo.png}" style="width: 280px; height: 150px"/>
                     </div>
 
-
-                    <p class="text-muted">
-
-                    <div th:if="${param.error}" class="e1">
-                        Invalid Username and Password
-                    </div>
-
-                    <div th:if="${param.logout}" class="e2">
-                        You have successfully logout
-                    </div>
-
-
-
-
-                    </p>
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="name" placeholder="Username"  th:value="${admin.name}">
                     <input type="password" name="password" placeholder="Password">
+                    <input type="email" name="email" placeholder="email"  th:value="${admin.email}">
+                    <input type="number" name="phone" placeholder="phone no"  th:value="${admin.phone}">
                     <a class="forgot text-muted" href="#">Forgot password?</a>
                     <input type="submit" name="" value="Login" href="#">
-                    <div class="col-md-12">
-                        <ul class="social-network social-circle">
-                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
+
                 </form>
             </div>
         </div>

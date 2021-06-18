@@ -1,11 +1,12 @@
 package com.food.config;
 
+
 import com.food.entity.Admin;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -54,3 +55,4 @@ public class CustomAdminDetails implements UserDetails {
         return true;
     }
 }
+

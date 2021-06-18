@@ -1,5 +1,6 @@
 package com.food.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -20,16 +21,16 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
         return new CustomAdminDetailsImpl();
     }
 
-   /* @Bean
+    @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-*/
+
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setUserDetailsService(this.userDetailsService());
-       // daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         return daoAuthenticationProvider;
     }
 
@@ -42,8 +43,9 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/user/**").hasRole("USER")
                 .antMatchers("/**").permitAll()
-                .and().formLogin().loginPage("/login")
-                .loginProcessingUrl("/doLogin")
+                .and().formLogin().loginPage("/loginMain")
+                .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/admin/index").and().csrf().disable();
     }
 }
+

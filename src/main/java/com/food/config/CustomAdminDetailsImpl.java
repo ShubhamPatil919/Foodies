@@ -1,5 +1,6 @@
 package com.food.config;
 
+
 import com.food.entity.Admin;
 import com.food.repo.AdminRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,3 +23,4 @@ public class CustomAdminDetailsImpl implements UserDetailsService {
         return customAdminDetails;
     }
 }
+
